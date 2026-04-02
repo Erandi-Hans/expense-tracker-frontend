@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ExpenseForm from './components/ExpenseForm';
-import ExpenseTable from './components/ExpenseTable';
+import ExpenseForm from './components/Layout/ExpenseForm';
+import ExpenseTable from './components/Layout/ExpenseTable';
 
 function App() {
   const [expenses, setExpenses] = useState([
@@ -34,9 +34,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-10">
+    <div className="min-h-screen p-10 bg-gray-100">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-10 text-indigo-600 uppercase">
+        <h1 className="mb-10 text-3xl font-bold text-center text-indigo-600 uppercase">
           💰 Expense Tracker
         </h1>
         <ExpenseForm 
