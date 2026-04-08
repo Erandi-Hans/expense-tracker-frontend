@@ -5,9 +5,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Dashboard', icon: <LayoutDashboard size={18} />, href: '#' },
-    { name: 'Expenses', icon: <Receipt size={18} />, href: '#' },
-    { name: 'Analytics', icon: <PieChart size={18} />, href: '#' },
+    { name: 'Dashboard', href: '#' },
+    { name: 'Expenses',  href: '#' },
+    { name: 'Analytics',  href: '#' },
   ];
 
   return (
@@ -18,9 +18,7 @@ const Navbar = () => {
           {/* Logo Section */}
           <div className="flex items-center">
             <div className="flex items-center flex-shrink-0 gap-2">
-              <div className="p-2 bg-blue-600 rounded-lg">
-                <Receipt className="text-white" size={24} />
-              </div>
+              
               <span className="text-xl font-bold tracking-tight text-gray-800">
                 Expense<span className="text-blue-600">Tracker</span>
               </span>
