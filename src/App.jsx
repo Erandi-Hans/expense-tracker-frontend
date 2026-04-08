@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ExpenseForm from './components/Layout/ExpenseForm';
 import ExpenseTable from './components/Layout/ExpenseTable';
 import Navbar from './components/Layout/Navbar';
+import ExpenseTrackerDashboard from './components/UI/ExpenseTrackerDashboard';
 
 function App() {
   const [expenses, setExpenses] = useState([
@@ -37,19 +38,7 @@ function App() {
   return (
     <div className="min-h-screen p-10 bg-gray-100">
       <Navbar />
-      <div className="max-w-4xl mx-auto">
-        <h1 className="mb-10 text-3xl font-bold text-center text-indigo-600 uppercase">
-          💰 Expense Tracker
-        </h1>
-        <ExpenseForm 
-          formData={formData} 
-          setFormData={setFormData} 
-          handleSubmit={handleSubmit} 
-        />
-        <div className="mt-10">
-          <ExpenseTable expenses={expenses} handleDelete={handleDelete} />
-        </div>
-      </div>
+      <ExpenseTrackerDashboard />
     </div>
   );
 }
