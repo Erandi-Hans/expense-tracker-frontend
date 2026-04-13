@@ -1,4 +1,5 @@
 import React from 'react';
+import studentImg from '../../assets/images/student.png';
 
 const ExpenseTrackerHeader = () => {
   return (
@@ -42,8 +43,8 @@ const ExpenseTrackerHeader = () => {
           
           {/* 3. Static Image Display */}
           <img 
-            src="https://raw.githubusercontent.com/username/project/main/static-student.png" // <--- මෙතනට ඔබේ පින්තූරයේ නිවැරදි URL එක හෝ Path එක දාන්න
-            alt="Student pointing" 
+            src={studentImg}
+            alt="Student" 
             className="object-cover w-full h-full"
           />
         </div>
