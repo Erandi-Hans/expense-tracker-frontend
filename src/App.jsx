@@ -14,7 +14,8 @@ function App() {
       <Navbar />
 
       <Routers>
-        <ExpenseTrackerHeader />
+        <Router path="/" element="ExpenseTrackerHeader" />
+
         <ExpenseTrackerDashboard />
         <Analytics id="Analytics" />
       </Routers>
