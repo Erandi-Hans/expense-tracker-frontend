@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, LayoutDashboard, Receipt, PieChart, User, LogOut } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Link data tika array ekakata dammu code eka clean wenna
   const navLinks = [
-    { name: 'Dashboard', href: '#ExpenseTrackerDashboard' },
-    { name: 'Expenses', href: '#' },
-    { name: 'Analytics', href: '#Analytics' },
+    { name: 'Dashboard', to: '/', icon: <LayoutDashboard size={20} /> },
+    { name: 'Expenses', to: '/expenses', icon: <Receipt size={20} /> },
+    { name: 'Analytics', to: '/analytics', icon: <PieChart size={20} /> },
   ];
 
   return (
@@ -17,26 +19,26 @@ const Navbar = () => {
 
           {/* Logo Section */}
           <div className="flex items-center">
-            <div className="flex items-center flex-shrink-0 gap-2">
-
+            <Link to="/" className="flex items-center gap-2">
               <span className="text-xl font-bold tracking-tight text-gray-800">
                 Expense<span className="text-blue-600">Tracker</span>
               </span>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="items-center hidden space-x-8 md:flex">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.to}
                 className="flex items-center gap-2 font-medium text-gray-600 transition-colors hover:text-blue-600"
               >
                 {link.icon}
                 {link.name}
-              </a>
+              </Link>
             ))}
+
             <div className="flex items-center gap-4 pl-4 ml-4 border-l border-gray-200">
               <button className="text-gray-500 hover:text-gray-700">
                 <User size={20} />
@@ -64,17 +66,18 @@ const Navbar = () => {
         <div className="bg-white border-t border-gray-100 md:hidden animate-in slide-in-from-top">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.to}
+                onClick={() => setIsOpen(false)}
                 className="flex items-center gap-3 px-3 py-3 text-base font-medium text-gray-600 rounded-md hover:bg-blue-50 hover:text-blue-600"
               >
                 {link.icon}
                 {link.name}
-              </a>
+              </Link>
             ))}
             <hr className="my-2" />
-            <div className="flex items-center gap-3 px-3 py-3 text-red-600 rounded-md hover:bg-red-50">
+            <div className="flex items-center gap-3 px-3 py-3 text-red-600 rounded-md hover:bg-red-50 cursor-pointer">
               <LogOut size={18} />
               <span>Logout</span>
             </div>
