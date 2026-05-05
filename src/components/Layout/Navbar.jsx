@@ -5,20 +5,20 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Dashboard', href: '#' },
-    { name: 'Expenses',  href: '#' },
-    { name: 'Analytics',  href: '#' },
+    { name: 'Dashboard', href: '#ExpenseTrackerDashboard' },
+    { name: 'Expenses', href: '#' },
+    { name: 'Analytics', href: '#' },
   ];
 
   return (
     <nav className="fixed top-0 left-0 z-20 w-full bg-white border-b border-gray-200">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          
+
           {/* Logo Section */}
           <div className="flex items-center">
             <div className="flex items-center flex-shrink-0 gap-2">
-              
+
               <span className="text-xl font-bold tracking-tight text-gray-800">
                 Expense<span className="text-blue-600">Tracker</span>
               </span>
