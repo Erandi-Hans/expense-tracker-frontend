@@ -10,13 +10,15 @@ import Analytics from './components/Layout/Analytics';
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen p-10 bg-gray-100">
-        <Navbar />
+
+      <Navbar />
+
+      <Routers>
         <ExpenseTrackerHeader />
         <ExpenseTrackerDashboard />
         <Analytics id="Analytics" />
+      </Routers>
 
-      </div>
     </BrowserRouter>
   );
 
