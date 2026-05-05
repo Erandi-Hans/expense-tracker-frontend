@@ -4,6 +4,7 @@ import ExpenseTable from './components/Layout/ExpenseTable';
 import Navbar from './components/Layout/Navbar';
 import ExpenseTrackerDashboard from './components/UI/ExpenseTrackerDashboard';
 import ExpenseTrackerHeader from './components/Sections/Header';
+import Analytics from './components/Layout/Analytics';
 
 function App() {
   const [expenses, setExpenses] = useState([
@@ -41,7 +42,8 @@ function App() {
       <Navbar />
       <ExpenseTrackerHeader />
       <ExpenseTrackerDashboard />
-      
+      <Analytics />
+
     </div>
   );
 }
