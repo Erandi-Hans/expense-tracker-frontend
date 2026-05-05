@@ -7,7 +7,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Dashboard', href: '#ExpenseTrackerDashboard' },
     { name: 'Expenses', href: '#' },
-    { name: 'Analytics', href: '#' },
+    { name: 'Analytics', href: '#Analytics' },
   ];
 
   return (
